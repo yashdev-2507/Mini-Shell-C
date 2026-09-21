@@ -286,7 +286,7 @@ int pipe_execute(char **left,char **right){
 int execute(char **parsed_arr){
     int pipe_index = pipe_find(parsed_arr);
     int position = arr_size(parsed_arr);
-    for(int i = 0; i<builtin_count; i++){
+    for(int i = 0; i<builtin_count(); i++){
         if(strcmp(parsed_arr[0],builtin_string[i])==0){
             return builtin_function_pointer[i](parsed_arr);
         }
