@@ -89,7 +89,7 @@ char **parsing(char *input_array){
     }
     token = strtok(input_array,delimiter);
     while(token!= NULL){
-        parsed_arr[position]= token;
+        
         if(position>=size){
             size *= 2;
 
@@ -99,6 +99,7 @@ char **parsing(char *input_array){
                 exit(EXIT_FAILURE);
             }
         }
+        parsed_arr[position]= token;
         position++;
         token = strtok(NULL, delimiter);
         
